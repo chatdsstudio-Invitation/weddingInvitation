@@ -42,22 +42,21 @@ export const galleryImages = [
 
 export const timeline = [
   {
-    title: "Guest Arrival",
-    date: "July 24, 2026",
-    time: "5:00 PM",
-    description: "We warmly welcome you..!",
-  },
-  {
-    title: "Baraat Departure",
+    title: "Ghurchari",
     date: "July 24, 2026",
     time: "7:00 PM",
-    description: "Baarat departure from Ghurchari (groom's house) at 7:00 PM.",
+    description: "7pm groom's house",
+  },
+  {
+    title: "Baarat Departure",
+    date: "July 24, 2026",
+    time: "8:00 PM",
   },
   {
     title: "Wedding Ceremony",
     date: "July 24, 2026",
-    time: "8:00 PM",
-    description: "Your gracious presence is requested at the Wedding at 8:00 PM onwards.",
+    time: "9:00 PM",
+    description: "Your gracious presence is requested at the Wedding at 9:00 PM onwards.",
   },
 ];
 
