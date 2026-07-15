@@ -45,7 +45,7 @@ export const timeline = [
     title: "Ghurchari",
     date: "July 24, 2026",
     time: "7:00 PM",
-    description: "7pm groom's house",
+    description: "groom's house",
   },
   {
     title: "Baarat Departure",
@@ -56,7 +56,7 @@ export const timeline = [
     title: "Wedding Ceremony",
     date: "July 24, 2026",
     time: "9:00 PM",
-    description: "Your gracious presence is requested at the Wedding at 9:00 PM onwards.",
+    description: "Your gracious presence is requested at the Wedding.",
   },
 ];
 
