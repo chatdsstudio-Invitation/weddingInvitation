@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-script: var(--font-alex-brush);
+  --font-serif: var(--font-cormorant);
+
+  --color-blush-50: #fdf3f4;
+  --color-blush-100: #fbe9ec;
+  --color-blush-200: #f8dee2;
+  --color-blush-300: #f3c9d1;
+  --color-ink: #2c1017;
+  --color-maroon-400: #b23a58;
+  --color-maroon-500: #9a2745;
+  --color-maroon-600: #841f3b;
+  --color-maroon-700: #6b1830;
+  --color-navy-900: #1c2130;
+  --color-navy-800: #2a2f42;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-shimmer: shimmer 2.5s linear infinite;
+  --animate-ping-slow: ping-slow 2.2s cubic-bezier(0,0,0.2,1) infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  @keyframes ping-slow {
+    0% { transform: scale(1); opacity: 0.6; }
+    75%, 100% { transform: scale(1.4); opacity: 0; }
+  }
+}
+
+:root {
+  --background: var(--color-blush-50);
+  --foreground: var(--color-ink);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-serif), Georgia, serif;
+  overflow-x: hidden;
+}
+
+.font-script {
+  font-family: var(--font-script), cursive;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  width: 3.5rem;
+  background: currentColor;
+  opacity: 0.35;
+}
+
+.text-shadow-soft {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
+::selection {
+  background: var(--color-maroon-400);
+  color: white;
+}
+
+/* Some mobile browsers (notably iOS Safari) render their own default
+   play-button glyph over an inline <video> until playback begins, even
+   with no controls attribute. Explicitly hide every vendor's overlay so
+   the only "play" affordance on the page is the envelope wax seal. */
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-start-playback-button,
+.hero-video::-webkit-media-controls-play-button,
+.hero-video::-webkit-media-controls-panel,
+.hero-video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+  -webkit-appearance: none;
+  pointer-events: none;
+}
+.hero-video {
+  pointer-events: none;
+}
